@@ -35,11 +35,15 @@ export default function CarouselExp() {
     >
       <Box className={classes.empty} />
       <Box p={2} className={classes.textbox}>
-        <Typography variant="h6">
+        <Typography variant="h6" gutterBottom>
           {jobTitle}, {company}
         </Typography>
-        <Typography variant="body1">{time}</Typography>
-        <Typography paragraph>{description}</Typography>
+        <Typography variant="body1" gutterBottom style={{ color: "#c0c0c0" }}>
+          {time}
+        </Typography>
+        <Typography paragraph gutterBottom>
+          {description}
+        </Typography>
       </Box>
     </Box>
   );
