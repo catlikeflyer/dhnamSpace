@@ -1,10 +1,4 @@
-import {
-  Box,
-  Container,
-  Typography,
-  makeStyles,
-  useTheme
-} from "@material-ui/core";
+import CarouselExp from "../components/CarouselExp"
 import React, {useEffect} from "react";
 import ColorDivider from "../components/ColorDivider";
 import {
@@ -13,6 +7,11 @@ import {
   ListItemText,
   ListItemIcon,
   List,
+  Box,
+  Container,
+  Typography,
+  makeStyles,
+  useTheme,
   Icon,
 } from "@material-ui/core";
 import {
@@ -60,6 +59,7 @@ export default function Experience() {
             Experience
           </Typography>
           <ColorDivider />
+          <CarouselExp />
           <div>
             <List>
               <ListItem>

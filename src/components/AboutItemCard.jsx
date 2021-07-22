@@ -20,8 +20,7 @@ export default function AboutItemCard({ title, image, desc }) {
 
   return (
     <Box
-      p={1}
-      m={2}
+      m={1}
       display="flex"
       flexDirection="row"
       alignItems="flex-start"
