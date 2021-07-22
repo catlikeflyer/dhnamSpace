@@ -12,7 +12,7 @@ import Typist from "react-typist";
 import ColorDivider from "../components/ColorDivider";
 import ib from "../img/ib.png";
 import myImage from "../img/stickerlogo.png";
-import tec from "../img/tec.png"
+import tec from "../img/tec.png";
 import AboutItemCard from "../components/AboutItemCard";
 
 const useStyles = makeStyles((theme) => ({

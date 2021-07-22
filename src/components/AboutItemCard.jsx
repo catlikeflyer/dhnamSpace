@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
   image: {
     padding: 10,
     margin: 10,
-    width: "15%",
+    width: "10%",
   },
 }));
 
@@ -29,7 +29,7 @@ export default function AboutItemCard({ title, image, desc }) {
       justifyContent="center"
     >
       <img src={image} alt={title} className={classes.image} />
-      <Box display="flex" flexDirection="column" alignItems="flex-start" p={1}>
+      <Box display="flex" flexDirection="column" alignItems="flex-start" pt={1} pb={1}>
         <Typography variant="h6">{title}</Typography>
         <Typography paragraph style={{ color: "#dddddd" }}>
           {desc}
