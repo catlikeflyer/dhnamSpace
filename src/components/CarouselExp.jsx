@@ -2,6 +2,8 @@ import React from "react";
 import { Box, makeStyles, Typography, useTheme } from "@material-ui/core";
 import Carousel from "react-material-ui-carousel";
 import { ArrowLeft, ArrowRight } from "@material-ui/icons";
+import { useContext } from "react";
+import { DataContext } from "../context";
 
 const useStyles = makeStyles((theme) => ({
   empty: {
@@ -18,33 +20,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const experiences = [
-  {
-    company: "Saving Tuvalu",
-    jobTitle: "Web developer",
-    description: "Lorem ipsum dolor sit amet.",
-    time: "Jun 2020 ~",
-    image: "",
-  },
-  {
-    company: "Saving Tuvalu",
-    jobTitle: "Web developer",
-    description: "Lorem ipsum dolor sit amet.",
-    time: "Jun 2020 ~",
-    image: "",
-  },
-  {
-    company: "Saving Tuvalu",
-    jobTitle: "Web developer",
-    description: "Lorem ipsum dolor sit amet.",
-    time: "Jun 2020 ~",
-    image: "",
-  },
-];
-
 export default function CarouselExp() {
   const theme = useTheme();
   const classes = useStyles(theme);
+  const { data } = useContext(DataContext);
 
   const SliderComponent = ({ company, jobTitle, description, time, image }) => (
     <Box
@@ -76,7 +55,7 @@ export default function CarouselExp() {
         console.log(`we left ${active}, and are now at ${prev}`)
       }
     >
-      {experiences.map((exp) => (
+      {data.experiences.map((exp) => (
         <SliderComponent {...exp} />
       ))}
     </Carousel>

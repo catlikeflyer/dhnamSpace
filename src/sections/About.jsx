@@ -7,13 +7,12 @@ import {
   Grid,
   Divider,
 } from "@material-ui/core";
-import React from "react";
+import React, { useContext } from "react";
 import Typist from "react-typist";
 import ColorDivider from "../components/ColorDivider";
-import ib from "../img/ib.png";
 import myImage from "../img/stickerlogo.png";
-import tec from "../img/tec.png";
 import AboutItemCard from "../components/AboutItemCard";
+import { DataContext } from "../context";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -32,22 +31,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const aboutItems = [
-  {
-    title: "International Baccalaureate",
-    desc: "International Baccalaureate alumni, graduated from the bilingual diploma programme.",
-    image: ib,
-  },
-  {
-    title: "B.Sc. Computer Science",
-    desc: "Aspiring computer scientist studying in Mexico at Monterrey Institute of Technology.",
-    image: tec,
-  },
-];
-
 export default function About() {
   const theme = useTheme();
   const classes = useStyles(theme);
+  const { data } = useContext(DataContext);
 
   return (
     <section id="about">
@@ -87,7 +74,7 @@ export default function About() {
               alignItems="center"
             >
               <Typist>
-                <Typography variant="h6" fontWeight="light" className={classes}>
+                <Typography paragraph fontWeight="light" className={classes}>
                   If a word describes me, it'll be curiosity. It drives people
                   everywhere, from the park in the neighborhood all the way up
                   to Mars (well, soon enough).
@@ -100,7 +87,7 @@ export default function About() {
               </Typist>
               <Divider />
               <Grid container>
-                {aboutItems.map((item) => (
+                {data.aboutItems.map((item) => (
                   <Grid item xs={12}>
                     <AboutItemCard {...item} />
                   </Grid>

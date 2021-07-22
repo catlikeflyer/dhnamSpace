@@ -1,0 +1,69 @@
+{
+  "aboutItems": [
+    {
+      "title": "International Baccalaureate",
+      "desc": "International Baccalaureate alumni, graduated from the bilingual diploma programme.",
+      "image": "../img/ib.png"
+    },
+    {
+      "title": "B.Sc. Computer Science",
+      "desc": "Aspiring computer scientist studying in Mexico at Monterrey Institute of Technology.",
+      "image": "../img/tec.png"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Pokedex",
+      "info": "Lorem ipsum dolor sit amet.",
+      "demolink": "https://instagram.com/catlikeflyer",
+      "thumbnail": "https://images.unsplash.com/photo-1584907797015-7554cd315667?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80"
+    },
+    {
+      "title": "Pokedex",
+      "info": "Lorem ipsum dolor sit amet.",
+      "demolink": "https://instagram.com/catlikeflyer",
+      "thumbnail": "https://images.unsplash.com/photo-1584907797015-7554cd315667?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80"
+    },
+    {
+      "title": "Pokedex",
+      "info": "Lorem ipsum dolor sit amet.",
+      "demolink": "https://instagram.com/catlikeflyer",
+      "thumbnail": "https://images.unsplash.com/photo-1584907797015-7554cd315667?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80"
+    },
+    {
+      "title": "Pokedex",
+      "info": "Lorem ipsum dolor sit amet.",
+      "demolink": "https://instagram.com/catlikeflyer",
+      "thumbnail": "https://images.unsplash.com/photo-1584907797015-7554cd315667?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80"
+    },
+    {
+      "title": "Pokedex",
+      "data": "Lorem ipsum dolor sit amet.",
+      "demolink": "https://instagram.com/catlikeflyer",
+      "thumbnail": "https://images.unsplash.com/photo-1584907797015-7554cd315667?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80)"
+    }
+  ],
+  "experiences": [
+    {
+      "company": "Saving Tuvalu",
+      "jobTitle": "Web developer",
+      "description": "Lorem ipsum dolor sit amet.",
+      "time": "Jun 2020 ~",
+      "image": ""
+    },
+    {
+      "company": "Saving Tuvalu",
+      "jobTitle": "Web developer",
+      "description": "Lorem ipsum dolor sit amet.",
+      "time": "Jun 2020 ~",
+      "image": ""
+    },
+    {
+      "company": "Saving Tuvalu",
+      "jobTitle": "Web developer",
+      "description": "Lorem ipsum dolor sit amet.",
+      "time": "Jun 2020 ~",
+      "image": ""
+    }
+  ]
+}

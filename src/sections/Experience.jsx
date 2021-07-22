@@ -1,5 +1,5 @@
 import CarouselExp from "../components/CarouselExp"
-import React, {useEffect} from "react";
+import React, {useEffect, useContext} from "react";
 import ColorDivider from "../components/ColorDivider";
 import {
   Grid,
@@ -21,6 +21,7 @@ import {
 } from "@material-ui/icons";
 import { loadCSS } from "fg-loadcss";
 import { orange, yellow, blue } from "@material-ui/core/colors";
+import { DataContext } from "../context";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -34,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Experience() {
   const theme = useTheme();
   const classes = useStyles(theme);
+  const {data} = useContext(DataContext)
 
   useEffect(() => {
     const node = loadCSS(

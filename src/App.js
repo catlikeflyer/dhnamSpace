@@ -3,6 +3,7 @@ import Experience from "./sections/Experience";
 import Header from "./sections/Header";
 import Projects from "./sections/Projects";
 import {createMuiTheme, ThemeProvider} from "@material-ui/core"
+import { DataProvider } from "./context";
 
 // Creating a theme
 const theme = createMuiTheme({
@@ -18,11 +19,13 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <Header /> <About />
-        <Projects />
-        <Experience />
-      </div>
+      <DataProvider>
+        <div>
+          <Header /> <About />
+          <Projects />
+          <Experience />
+        </div>
+      </DataProvider>
     </ThemeProvider>
   );
 }
