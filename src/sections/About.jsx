@@ -7,7 +7,7 @@ import {
   Grid,
   Divider,
 } from "@material-ui/core";
-import React, { useEffect } from "react";
+import React from "react";
 import Typist from "react-typist";
 import ColorDivider from "../components/ColorDivider";
 import ib from "../img/ib.png";
