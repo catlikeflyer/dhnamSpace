@@ -106,7 +106,7 @@ export default function Navbar() {
           {isMobile ? (
             <div className={classes.links}>
               <IconButton
-                color="textPrimary"
+                color="inherit"
                 className={classes.menuButton}
                 edge="start"
                 aria-label="right"
