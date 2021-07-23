@@ -38,7 +38,7 @@ export default function Header() {
   const classes = useStyles(theme);
 
   return (
-    <div className={classes.header}>
+    <div className={classes.header} id="space">
       <div className={classes.background} />
       <Box
         display="flex"

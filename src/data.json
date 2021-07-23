@@ -9,6 +9,11 @@
       "title": "B.Sc. Computer Science",
       "desc": "Aspiring computer scientist studying in Mexico at Monterrey Institute of Technology.",
       "image": "../img/tec.png"
+    },
+    {
+      "title": "PADI Open Water Diver",
+      "desc": "Obtained the basic level of diving certificate issued by PADI. Meets ISO 24801-2: Autonomous diver standard.",
+      "image": "../img/padi.png"
     }
   ],
   "projects": [

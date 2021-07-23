@@ -52,4 +52,5 @@ code {
 
 .active {
   border-bottom: 3px solid #ffffff;
+  transition: all ease-in-out .2s;
 }

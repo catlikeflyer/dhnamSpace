@@ -22,9 +22,11 @@ const useStyles = makeStyles((theme) => {
     },
     links: {
       marginLeft: "auto",
+      fontFamily: "Orbitron",
     },
     list: {
       width: 250,
+      fontFamily: "Orbitron",
     },
     fullList: {
       width: "auto",
@@ -101,7 +103,11 @@ export default function Navbar() {
 
   return (
     <div>
-      <AppBar position="fixed" style={{ background: "rgba(0, 0, 0, 0)" }} elevation={0}>
+      <AppBar
+        position="fixed"
+        style={{ background: "rgba(0, 0, 0, 0)" }}
+        elevation={0}
+      >
         <Toolbar>
           {isMobile ? (
             <div className={classes.links}>
@@ -125,6 +131,18 @@ export default function Navbar() {
             </div>
           ) : (
             <div className={classes.links}>
+              <Button color="inherit">
+                <Link
+                  activeClass="active"
+                  to="space"
+                  spy={true}
+                  smooth={true}
+                  offset={-40}
+                  duration={500}
+                >
+                  Space
+                </Link>
+              </Button>
               <Button color="inherit">
                 <Link
                   activeClass="active"

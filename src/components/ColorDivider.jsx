@@ -4,11 +4,10 @@ import React from "react";
 const useStyles = makeStyles({
   divider: {
     height: 5,
-    width: "10vw",
     alignSelf: "center",
     marginTop: 20,
     marginBottom: 40,
-    borderRadius: 20
+    borderRadius: 20,
   },
   container: {
     width: "100%",
@@ -20,12 +19,15 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ColorDivider({color = "white"}) {
+export default function ColorDivider({ color = "white", width = "10vh" }) {
   const classes = useStyles();
 
   return (
     <Box className={classes.container}>
-      <div className={classes.divider} style={{backgroundColor: color}} />
+      <div
+        className={classes.divider}
+        style={{ backgroundColor: color, width: width }}
+      />
     </Box>
   );
 }
