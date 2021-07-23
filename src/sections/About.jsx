@@ -13,6 +13,7 @@ import ColorDivider from "../components/ColorDivider";
 import myImage from "../img/stickerlogo.png";
 import AboutItemCard from "../components/AboutItemCard";
 import { DataContext } from "../context";
+import MeCard from "../components/MeCard";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
   image: {
     width: "50%",
     marginLeft: "auto",
-    marginRight: "auto"
+    marginRight: "auto",
   },
   text: {
     color: "white",
@@ -92,15 +93,18 @@ export default function About() {
               </Grid>
             </Grid>
           </Grid>
-          <Grid container>
-            <Grid item xs={12}>
-              <Typography variant="h4" gutterBottom align="center">Aptitudes</Typography>
-              <ColorDivider width="5vw" />
-            </Grid>
-            <Grid item xs={12}>
-              <Typography variant="h4">Aptitudes</Typography>
-              <ColorDivider width="5vw" />
-            </Grid>
+          <Typography variant="h4" gutterBottom align="center">
+            Aptitudes
+          </Typography>
+          <ColorDivider width="5vw" />
+          <Grid container justifyContent="center">
+            {data.aptitudes.map((ap) => (
+              <Grid item xs={12} md={4} lg={3}>
+                <Box p={1}>
+                  <MeCard {...ap} />
+                </Box>
+              </Grid>
+            ))}
           </Grid>
         </Container>
       </Box>

@@ -19,11 +19,18 @@ export default function MeCard({ icon, text, color }) {
       flexDirection="row"
       alignItems="center"
       className={classes.root}
-      justifyContent="center"
+      justifyContent="flex-start"
       p={1}
     >
-      <Icon className={icon} style={{ fontSize: 100, color: `${color}` }} />
-      <Typography variant="h6" className={classes.text}>
+      <Box m={1}>
+        <Icon
+          style={{ fontSize: 40, color: color, paddingRight: 25 }}
+        />
+      </Box>
+      <Typography
+        variant="h6"
+        style={{ justifySelf: "flex-end" }}
+      >
         {text}
       </Typography>
     </Box>

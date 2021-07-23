@@ -58,5 +58,22 @@
       "time": "August 2017 ~",
       "image": ""
     }
+  ],
+  "aptitudes": [
+    {
+      "text": "Open-minded",
+      "icon": "fas fa-brain",
+      "color": "primary"
+    },
+    {
+      "text": "Lifelong learning",
+      "icon": "fas fa-graduation-cap",
+      "color": "primary"
+    },
+    {
+      "text": "Leadership",
+      "icon": "fas fa-users",
+      "color": "primary"
+    }
   ]
 }
