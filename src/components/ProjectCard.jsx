@@ -13,7 +13,8 @@ const useStyles = makeStyles({
   root: {
     maxWidth: "100%",
     backgroundColor: "rgba(55, 55, 55, 0.85)",
-    color: "white"
+    color: "white",
+    borderRadius: 10
   },
   media: {
     height: 200,

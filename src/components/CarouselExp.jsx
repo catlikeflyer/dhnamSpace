@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
   },
   box: {
     backgroundColor: "grey",
+    borderRadius: 10
   },
   textbox: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",

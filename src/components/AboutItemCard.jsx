@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "rgba(55, 55, 55, 0.85)",
     color: "white",
-    borderRadius: 5,
+    borderRadius: 10,
   },
   image: {
     padding: 10,
