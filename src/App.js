@@ -2,17 +2,36 @@ import About from "./sections/About";
 import Experience from "./sections/Experience";
 import Header from "./sections/Header";
 import Projects from "./sections/Projects";
-import {createMuiTheme, ThemeProvider} from "@material-ui/core"
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { DataProvider } from "./context";
+import Navbar from "./components/Navbar";
 
 // Creating a theme
 const theme = createMuiTheme({
   typography: {
-    fontFamily: "Orbitron",
+    fontFamily: "Quicksand",
     fontWeightLight: 400,
     fontWeightRegular: 500,
     fontWeightMedium: 600,
-    fontWeightBold: 700
+    fontWeightBold: 700,
+    h1: {
+      fontFamily: "Orbitron",
+    },
+    h2: {
+      fontFamily: "Orbitron",
+    },
+    h3: {
+      fontFamily: "Orbitron",
+    },
+    h4: {
+      fontFamily: "Orbitron",
+    },
+    h5: {
+      fontFamily: "Orbitron",
+    },
+    h6: {
+      fontFamily: "Orbitron",
+    },
   },
 });
 
@@ -20,11 +39,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <DataProvider>
-        <div>
-          <Header /> <About />
-          <Projects />
-          <Experience />
-        </div>
+        <Navbar />
+        <Header /> 
+        <About />
+        <Projects />
+        <Experience />
       </DataProvider>
     </ThemeProvider>
   );

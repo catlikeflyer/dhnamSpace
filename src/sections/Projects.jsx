@@ -38,7 +38,6 @@ export default function Projects() {
           <Typography
             variant="h2"
             align="center"
-            style={{ fontFamily: "Megrim" }}
             gutterBottom
           >
             Projects

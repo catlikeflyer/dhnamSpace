@@ -53,16 +53,26 @@ export default function Header() {
           marginTop="auto"
           marginBottom="auto"
           position="absolute"
-          top="30%"
+          top="25%"
         >
           <Typist>
-            <Typography
-              variant="h1"
-              align="center"
-              style={{ fontFamily: "Megrim" }}
-            >
-              Hello World
-            </Typography>
+            <Box display="flex" flexDirection="column" alignItems="flex-start">
+              <Typography variant="h1">
+                SPACE{" "}
+                <Typography
+                  variant="h6"
+                  gutterBottom
+                  style={{ color: "#c0c0c0" }}
+                >
+                  {"(Noun) "}
+                  def.
+                </Typography>
+              </Typography>
+              <Typography variant="h6" component="body1">
+                The boundless three-dimensional extent in which objects and
+                events have relative position and direction.
+              </Typography>
+            </Box>
             <ColorDivider />
             <Typist.Delay ms={1000} />
             <Typography variant="h5" className={classes.text}>

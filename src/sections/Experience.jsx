@@ -55,7 +55,6 @@ export default function Experience() {
           <Typography
             variant="h2"
             align="center"
-            style={{ fontFamily: "Megrim" }}
             gutterBottom
           >
             Experience

@@ -23,7 +23,9 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100vh",
   },
   image: {
-    maxWidth: "100%",
+    width: "50%",
+    marginLeft: "auto",
+    marginRight: "auto"
   },
   text: {
     color: "white",
@@ -40,12 +42,7 @@ export default function About() {
     <section id="about">
       <Box width={1} pt={4} className={classes.container}>
         <Container maxWidth="lg">
-          <Typography
-            variant="h2"
-            align="center"
-            style={{ fontFamily: "Megrim" }}
-            gutterBottom
-          >
+          <Typography variant="h2" align="center" gutterBottom>
             About Me
           </Typography>
           <ColorDivider />
@@ -54,21 +51,6 @@ export default function About() {
               item
               xs={12}
               md={5}
-              lg={3}
-              direction="column"
-              justifyContent="center"
-              alignItems="center"
-            >
-              <img src={myImage} alt="me" className={classes.image} />
-            </Grid>
-            <Grid item md={2} xs={0} lg={2}>
-              {"  "}
-            </Grid>
-            <Grid
-              item
-              xs={12}
-              md={5}
-              lg={7}
               direction="column"
               justifyContent="center"
               alignItems="center"
@@ -85,6 +67,21 @@ export default function About() {
                   <br /> <br />
                 </Typography>
               </Typist>
+              <Box display="flex" width="100%" alignItems="center">
+                <img src={myImage} alt="me" className={classes.image} />
+              </Box>
+            </Grid>
+            <Grid item xs={0} md={1}>
+              {" "}
+            </Grid>
+            <Grid
+              item
+              xs={12}
+              md={6}
+              direction="column"
+              justifyContent="center"
+              alignItems="center"
+            >
               <Divider />
               <Grid container>
                 {data.aboutItems.map((item) => (
