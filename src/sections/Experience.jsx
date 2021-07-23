@@ -55,6 +55,20 @@ export default function Experience() {
           </Typography>
           <ColorDivider />
           <CarouselExp />
+          <Grid container>
+            <Grid item xs={12} md={6}>
+              <Typography variant="h4" align="center" gutterBottom>
+                Hobbies
+              </Typography>
+              <ColorDivider width="5vw"></ColorDivider>
+            </Grid>
+            <Grid item xs={12} md={6}>
+              <Typography variant="h4" align="center" gutterBottom>
+                Skills
+              </Typography>
+              <ColorDivider width="5vw"></ColorDivider>
+            </Grid>
+          </Grid>
           <div>
             <List>
               <ListItem>
