@@ -92,6 +92,16 @@ export default function About() {
               </Grid>
             </Grid>
           </Grid>
+          <Grid container>
+            <Grid item xs={12}>
+              <Typography variant="h4" gutterBottom align="center">Aptitudes</Typography>
+              <ColorDivider width="5vw" />
+            </Grid>
+            <Grid item xs={12}>
+              <Typography variant="h4">Aptitudes</Typography>
+              <ColorDivider width="5vw" />
+            </Grid>
+          </Grid>
         </Container>
       </Box>
     </section>
