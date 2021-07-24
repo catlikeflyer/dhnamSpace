@@ -14,6 +14,7 @@ import myImage from "../img/stickerlogo.png";
 import AboutItemCard from "../components/AboutItemCard";
 import { DataContext } from "../context";
 import MeCard from "../components/MeCard";
+import Spacer from "../components/Spacer";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -93,6 +94,7 @@ export default function About() {
               </Grid>
             </Grid>
           </Grid>
+          <Spacer height={50} />
           <Typography variant="h4" gutterBottom align="center">
             Aptitudes
           </Typography>
@@ -107,7 +109,7 @@ export default function About() {
             ))}
           </Grid>
         </Container>
-        <div style={{ height: 100 }} />
+        <Spacer />
       </Box>
     </section>
   );

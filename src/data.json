@@ -107,5 +107,16 @@
       "icon": "fas fa-gamepad",
       "color": "primary"
     }
+  ],
+  "skills": [
+    { "icon": "fab fa-html5", "text": "HTML5", "color": "primary" },
+    {
+      "icon": "fab fa-js-square",
+      "text": "JavaScript",
+      "color": "primary"
+    },
+    { "icon": "fab fa-css3-alt", "text": "CSS3", "color": "primary" },
+    { "icon": "fab fa-react", "text": "React", "color": "primary" },
+    { "icon": "fab fa-python", "text": "Python", "color": "primary" }
   ]
 }
