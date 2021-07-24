@@ -75,5 +75,37 @@
       "icon": "fas fa-users",
       "color": "primary"
     }
+  ],
+  "hobbies": [
+    {
+      "text": "Basketball",
+      "icon": "fas fa-basketball-ball",
+      "color": "primary"
+    },
+    {
+      "text": "Football (soccer)",
+      "icon": "far fa-futbol",
+      "color": "primary"
+    },
+    {
+      "text": "Traveling",
+      "icon": "fas fa-plane",
+      "color": "primary"
+    },
+    {
+      "text": "Scuba diving",
+      "icon": "fas fa-fish",
+      "color": "primary"
+    },
+    {
+      "text": "Analysing movies/tv",
+      "icon": "fas fa-tv",
+      "color": "primary"
+    },
+    {
+      "text": "Playing Nintendo",
+      "icon": "fas fa-gamepad",
+      "color": "primary"
+    }
   ]
 }

@@ -1,5 +1,5 @@
 import CarouselExp from "../components/CarouselExp";
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import ColorDivider from "../components/ColorDivider";
 import {
   Grid,
@@ -21,6 +21,8 @@ import {
 } from "@material-ui/icons";
 import { loadCSS } from "fg-loadcss";
 import { orange, yellow, blue } from "@material-ui/core/colors";
+import { DataContext } from "../context";
+import MeCard from "../components/MeCard";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -34,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Experience() {
   const theme = useTheme();
   const classes = useStyles(theme);
+  const {data} = useContext(DataContext)
 
   useEffect(() => {
     const node = loadCSS(
@@ -61,6 +64,15 @@ export default function Experience() {
                 Hobbies
               </Typography>
               <ColorDivider width="5vw"></ColorDivider>
+              <Grid container>
+                {data.hobbies.map((hob) => (
+                  <Grid item xs={12} md={6}>
+                    <Box p={1}>
+                      <MeCard {...hob} />
+                    </Box>
+                  </Grid>
+                ))}
+              </Grid>
             </Grid>
             <Grid item xs={12} md={6}>
               <Typography variant="h4" align="center" gutterBottom>

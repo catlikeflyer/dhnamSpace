@@ -24,6 +24,7 @@ export default function MeCard({ icon, text, color }) {
     >
       <Box m={1}>
         <Icon
+          className={icon}
           style={{ fontSize: 40, color: color, paddingRight: 25 }}
         />
       </Box>

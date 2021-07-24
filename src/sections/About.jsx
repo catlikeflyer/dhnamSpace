@@ -107,6 +107,7 @@ export default function About() {
             ))}
           </Grid>
         </Container>
+        <div style={{ height: 100 }} />
       </Box>
     </section>
   );
