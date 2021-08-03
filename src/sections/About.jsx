@@ -8,7 +8,6 @@ import {
   Divider,
 } from "@material-ui/core";
 import React, { useContext } from "react";
-import Typist from "react-typist";
 import ColorDivider from "../components/ColorDivider";
 import myImage from "../img/stickerlogo.png";
 import AboutItemCard from "../components/AboutItemCard";
@@ -57,7 +56,6 @@ export default function About() {
               justifyContent="center"
               alignItems="center"
             >
-              <Typist>
                 <Typography paragraph fontWeight="light" className={classes}>
                   If a word describes me, it'll be curiosity. It drives people
                   everywhere, from the park in the neighborhood all the way up
@@ -68,7 +66,6 @@ export default function About() {
                   meet and connect with people all around the world.
                   <br /> <br />
                 </Typography>
-              </Typist>
               <Box display="flex" width="100%" alignItems="center">
                 <img src={myImage} alt="me" className={classes.image} />
               </Box>

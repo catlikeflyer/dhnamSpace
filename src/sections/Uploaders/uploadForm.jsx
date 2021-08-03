@@ -9,7 +9,7 @@ import {
 import SendIcon from "@material-ui/icons/Send";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
-import { pFirestore, pStorage, timestamp } from "../firebaseConfig";
+import { pFirestore, pStorage, timestamp } from "../../firebaseConfig";
 
 // Custom CSS styles
 const useStyles = makeStyles({

@@ -6,7 +6,7 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { DataProvider } from "./context";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Create from "./sections/uploadForm";
+import Create from "./sections/Uploaders/uploadForm";
 
 // Creating a theme
 const theme = createMuiTheme({
