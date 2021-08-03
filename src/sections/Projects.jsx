@@ -24,22 +24,19 @@ const useStyles = makeStyles((theme) => ({
 export default function Projects() {
   const theme = useTheme();
   const classes = useStyles(theme);
-  const {data} = useContext(DataContext)
+  const { useFirestore } = useContext(DataContext);
   const breakpoints = {
     default: 3,
     1100: 2,
     700: 1,
   };
+  const { docs } = useFirestore("projects");
 
   return (
     <section id="projects">
       <Box width={1} pt={4} className={classes.container}>
         <Container maxWidth="lg">
-          <Typography
-            variant="h2"
-            align="center"
-            gutterBottom
-          >
+          <Typography variant="h2" align="center" gutterBottom>
             Projects
           </Typography>
           <ColorDivider />
@@ -48,9 +45,7 @@ export default function Projects() {
             className="my-masonry-grid"
             columnClassName="my-masonry-grid_column"
           >
-            {data.projects.map((project) => (
-              <ProjectsCard {...project} />
-            ))}
+            {docs && docs.map((project) => <ProjectsCard {...project} key={project.id}/>)}
           </Masonry>
         </Container>
       </Box>
