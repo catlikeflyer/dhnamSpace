@@ -12,11 +12,14 @@ const useStyles = makeStyles((theme) => ({
   },
   box: {
     backgroundColor: "grey",
-    borderRadius: 10
+    borderRadius: 10,
+    minHeight: 500,
+    backgroundPosition: "center",
+    backgroundAttachment: "cover"
   },
   textbox: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
-    height: "100%",
+    minHeight: "100%",
     width: "50%",
   },
 }));
@@ -24,26 +27,28 @@ const useStyles = makeStyles((theme) => ({
 export default function CarouselExp() {
   const theme = useTheme();
   const classes = useStyles(theme);
-  const { data } = useContext(DataContext);
+  const { useFirestore } = useContext(DataContext);
 
-  const SliderComponent = ({ company, jobTitle, description, time, image }) => (
+  const { docs } = useFirestore("experiences");
+
+  const SliderComponent = ({ title, jobTitle, desc, date, imageUrl }) => (
     <Box
       display="flex"
       flexDirection="row"
       alignItems="flex-start"
-      style={{ backgroundImage: `${image}` }}
+      style={{ backgroundImage: `url(${imageUrl})` }}
       className={classes.box}
     >
       <Box className={classes.empty} />
       <Box p={2} className={classes.textbox}>
         <Typography variant="h6" gutterBottom>
-          {jobTitle}, {company}
+          {title} - {jobTitle}
         </Typography>
         <Typography variant="body1" gutterBottom style={{ color: "#c0c0c0" }}>
-          {time}
+          {date}
         </Typography>
         <Typography paragraph gutterBottom>
-          {description}
+          {desc}
         </Typography>
       </Box>
     </Box>
@@ -60,7 +65,7 @@ export default function CarouselExp() {
         console.log(`we left ${active}, and are now at ${prev}`)
       }
     >
-      {data.experiences.map((exp) => (
+      {docs.map((exp) => (
         <SliderComponent {...exp} />
       ))}
     </Carousel>
