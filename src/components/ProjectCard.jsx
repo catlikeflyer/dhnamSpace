@@ -21,7 +21,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function ProjectsCard({title, thumbnail, info, demolink}) {
+export default function ProjectsCard({title, imageUrl, desc, link}) {
   const classes = useStyles();
 
   return (
@@ -29,7 +29,7 @@ export default function ProjectsCard({title, thumbnail, info, demolink}) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          src={thumbnail}
+          image={imageUrl}
           title={title}
         />
         <CardContent>
@@ -37,15 +37,15 @@ export default function ProjectsCard({title, thumbnail, info, demolink}) {
             {title}
           </Typography>
           <Typography variant="body2" component="p" style={{color: "#dddddd"}}>
-            {info}
+            {desc}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" href={demolink}>
+        <Button size="small" color="primary" href={link}>
           Live demo
         </Button>
-        <ModalProject data={info} title={title} />
+        <ModalProject data={desc} title={title} />
       </CardActions>
     </Card>
   );

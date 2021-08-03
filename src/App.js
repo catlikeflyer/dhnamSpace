@@ -5,6 +5,8 @@ import Projects from "./sections/Projects";
 import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { DataProvider } from "./context";
 import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Uploaders from "./sections/Uploaders";
 
 // Creating a theme
 const theme = createMuiTheme({
@@ -38,13 +40,22 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <DataProvider>
-        <Navbar />
-        <Header /> 
-        <About />
-        <Projects />
-        <Experience />
-      </DataProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <DataProvider>
+              <Navbar />
+              <Header />
+              <About />
+              <Projects />
+              <Experience />
+            </DataProvider>
+          </Route>
+          <Route exact path="/uploader-for-me">
+            <Uploaders />
+          </Route>
+        </Switch>
+      </Router>
     </ThemeProvider>
   );
 }
