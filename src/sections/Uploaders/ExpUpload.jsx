@@ -23,15 +23,17 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Create() {
+export default function ExpUpload() {
   const classes = useStyles();
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
-  const [link, setLink] = useState("")
+  const [link, setLink] = useState("");
+  const [date, setDate] = useState("");
   const [titleError, setTitleError] = useState(false);
   const [descError, setDescError] = useState(false);
   const [linkError, setLinkError] = useState(false);
   const [fileError, setFileError] = useState(false);
+  const [dateError, setDateError] = useState(false);
   const [fileURL, setFileURL] = useState(null);
   const [file, setFile] = useState();
   const [error, setError] = useState(false);
@@ -57,22 +59,27 @@ export default function Create() {
       setLinkError(true);
     }
 
+    if (date === "") {
+      setDateError(true);
+    }
+
     if (!file) {
       setFileError(true);
     }
 
     if (title && desc && link && file) {
-      const collectionRef = pFirestore.collection("projects");
-      const date = timestamp();
+      const collectionRef = pFirestore.collection("experiences");
+      const created = timestamp();
       const probj = {
         title: title,
         desc: desc,
         imageUrl: fileURL,
         link: link,
-        date: date,
+        created: created,
+        date: date
       };
       collectionRef.add(probj);
-      console.log("added project");
+      console.log("added exp");
       if (fileURL) {
         history.push("/");
       }
@@ -95,7 +102,7 @@ export default function Create() {
       setDisabled(false);
     } else {
       setError("Invalid file type");
-      console.log(error)
+      console.log(error);
     }
   };
 
@@ -110,7 +117,7 @@ export default function Create() {
         color="textSecondary"
         className={classes}
       >
-        Create a new portfolio item
+        Create a new experience
       </Typography>
 
       {/* Textfields */}
@@ -133,6 +140,15 @@ export default function Create() {
           color="secondary"
           fullWidth
           error={linkError}
+        />
+        <TextField
+          onChange={(e) => setDate(e.target.value)}
+          className={classes.field}
+          label="Date"
+          variant="outlined"
+          color="secondary"
+          fullWidth
+          error={dateError}
         />
         <TextField
           onChange={(e) => setDesc(e.target.value)}
