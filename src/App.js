@@ -6,7 +6,7 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core";
 import { DataProvider } from "./context";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ProjectUpload from "./sections/Uploaders/ProjectUpload";
+import Uploaders from "./sections/Uploaders";
 
 // Creating a theme
 const theme = createMuiTheme({
@@ -41,11 +41,10 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Router>
-        <Navbar />
-
         <Switch>
           <Route exact path="/">
             <DataProvider>
+              <Navbar />
               <Header />
               <About />
               <Projects />
@@ -53,7 +52,7 @@ function App() {
             </DataProvider>
           </Route>
           <Route exact path="/uploader-for-me">
-            <ProjectUpload />
+            <Uploaders />
           </Route>
         </Switch>
       </Router>

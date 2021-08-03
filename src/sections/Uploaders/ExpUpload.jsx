@@ -73,7 +73,7 @@ export default function ExpUpload() {
       const probj = {
         title: title,
         desc: desc,
-        imageUrl: fileURL,
+        imageUrl: fileURL, 
         link: link,
         created: created,
         date: date
