@@ -97,6 +97,16 @@ export default function Navbar() {
         >
           <ListItem button>Experience</ListItem>
         </Link>
+        <Link
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          offset={-40}
+          duration={500}
+        >
+          <ListItem button>Contact Me</ListItem>
+        </Link>
       </List>
     </div>
   );
@@ -179,6 +189,18 @@ export default function Navbar() {
                   duration={500}
                 >
                   Experience
+                </Link>
+              </Button>
+              <Button color="inherit">
+                <Link
+                  activeClass="active"
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-40}
+                  duration={500}
+                >
+                  Contact Me
                 </Link>
               </Button>
             </div>

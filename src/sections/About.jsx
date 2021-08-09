@@ -41,7 +41,7 @@ export default function About() {
 
   return (
     <section id="about">
-      <Box width={1} pt={4} className={classes.container}>
+      <Box width={1} pt={4}  className={classes.container}>
         <Container maxWidth="lg">
           <Typography variant="h2" align="center" gutterBottom>
             About Me

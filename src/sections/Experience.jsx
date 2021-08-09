@@ -43,7 +43,7 @@ export default function Experience() {
 
   return (
     <section id="experience">
-      <Box width={1} pt={4} className={classes.container}>
+      <Box width={1} pt={4} pb={8} className={classes.container}>
         <Container maxWidth="lg">
           <Typography variant="h2" align="center" gutterBottom>
             Experience

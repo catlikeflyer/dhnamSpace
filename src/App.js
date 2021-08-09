@@ -7,6 +7,7 @@ import { DataProvider } from "./context";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Uploaders from "./sections/Uploaders";
+import Contact from "./sections/Contact";
 
 // Creating a theme
 const theme = createMuiTheme({
@@ -49,6 +50,7 @@ function App() {
               <About />
               <Projects />
               <Experience />
+              <Contact />
             </DataProvider>
           </Route>
           <Route exact path="/uploader-for-me">

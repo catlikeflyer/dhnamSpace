@@ -118,5 +118,18 @@
     { "icon": "fab fa-css3-alt", "text": "CSS3", "color": "primary" },
     { "icon": "fab fa-react", "text": "React", "color": "primary" },
     { "icon": "fab fa-python", "text": "Python", "color": "primary" }
+  ],
+  "contact": [
+    { "social": "Instagram", "link": "https://instagram.com/dh02nam", "icon": "fab fa-instagram" },
+    {
+      "social": "LinkedIn",
+      "link": "https://www.linkedin.com/in/do-hyun-nam-4779051a9/",
+      "icon": "fab fa-linkedin-in"
+    },
+    {
+      "social": "Github",
+      "link": "https://www.linkedin.com/in/do-hyun-nam-4779051a9/",
+      "icon": "fab fa-github"
+    }
   ]
 }
