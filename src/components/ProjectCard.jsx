@@ -41,7 +41,7 @@ export default function ProjectsCard({title, imageUrl, desc, link}) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" href={link}>
+        <Button size="small" color="inherit" href={link}>
           Live demo
         </Button>
       </CardActions>
