@@ -16,49 +16,6 @@
       "image": "../img/padi.png"
     }
   ],
-  "projects": [
-    {
-      "title": "Pokedex",
-      "info": "An implementation of what I like the most (Pokemon) with the help of PokeAPI. A pokedex that fetches data from the API, implemented simple backend with Flask.",
-      "demolink": "https://dhdex.herokuapp.com/",
-      "thumbnail": "https://images.unsplash.com/photo-1584907797015-7554cd315667?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80"
-    },
-    {
-      "title": "Stolen Voices",
-      "info": "A decision-making story game that aims to raise awareness that the victim's decision should never be used to justify the aggressor's actions. Made with Twine.",
-      "demolink": "https://dhnam.me/StolenVoices",
-      "thumbnail": "https://images.unsplash.com/photo-1584907797015-7554cd315667?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80"
-    },
-    {
-      "title": "Social C",
-      "info": "Private social media build using React and Firebase, with Reactstrap as a CSS framework for React. Post To-Dos, memories and suggest music with your private circle.",
-      "demolink": "https://social-c.netlify.app",
-      "thumbnail": "https://images.unsplash.com/photo-1584907797015-7554cd315667?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1055&q=80"
-    }
-  ],
-  "experiences": [
-    {
-      "company": "Saving Tuvalu",
-      "jobTitle": "Web developer",
-      "description": "Global campaign aimed to address the consequences of the climate crisis on Tuvalu. My role has been to plan innovative projects, and maintain the tech.",
-      "time": "June 2020 ~",
-      "image": ""
-    },
-    {
-      "company": "Starting Point",
-      "jobTitle": "COO",
-      "description": "Global campaign aimed to address the consequences of the climate crisis on Tuvalu. My role has been to plan innovative projects, and maintain the tech.",
-      "time": "March 2020 ~",
-      "image": ""
-    },
-    {
-      "company": "STEM Tutor",
-      "jobTitle": "Tutoring",
-      "description": "The 'job' I enjoy the most, teaching and interacting with other people. Always available to help and guide on things I know, and to learn the things I don't.",
-      "time": "August 2017 ~",
-      "image": ""
-    }
-  ],
   "aptitudes": [
     {
       "text": "Open-minded",

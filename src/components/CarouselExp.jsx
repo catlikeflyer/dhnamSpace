@@ -10,7 +10,6 @@ import Carousel from "react-material-ui-carousel";
 import { ArrowLeft, ArrowRight } from "@material-ui/icons";
 import { useContext } from "react";
 import { DataContext } from "../context";
-import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   empty: {

@@ -24,13 +24,14 @@ const useStyles = makeStyles((theme) => ({
     minHeight: "100vh",
   },
   image: {
-    width: "50%",
+    width: "25%",
     marginLeft: "auto",
     marginRight: "auto",
   },
   text: {
     color: "white",
     marginLeft: 2,
+    fontSize: 16,
   },
 }));
 
@@ -41,7 +42,7 @@ export default function About() {
 
   return (
     <section id="about">
-      <Box width={1} pt={4}  className={classes.container}>
+      <Box width={1} pt={4} className={classes.container}>
         <Container maxWidth="lg">
           <Typography variant="h2" align="center" gutterBottom>
             About Me
@@ -56,19 +57,31 @@ export default function About() {
               justifyContent="center"
               alignItems="center"
             >
-                <Typography paragraph fontWeight="light" className={classes}>
+              <Typography paragraph fontWeight="light" className={classes.text}>
+                <em>
                   If a word describes me, it'll be curiosity. It drives people
                   everywhere, from the park in the neighborhood all the way up
                   to Mars (well, soon enough).
-                  <br /> <br />
-                  As a Korean living in Mexico I had tons of opportunities to
-                  live and learn from both cultures, which sparked my love to
-                  meet and connect with people all around the world.
-                  <br /> <br />
-                </Typography>
-              <Box display="flex" width="100%" alignItems="center">
-                <img src={myImage} alt="me" className={classes.image} />
-              </Box>
+                </em>
+                <br /> <br />
+                I was born in Korea and lived there until 2004 (I was 2! So I
+                really don't remember anything) when my family moved down to
+                Mexico. While growing up, I was (and still am) a big fan of new
+                tech, cars & planes, sports, and Pokemon. Each one of them has
+                helped me into shaping and learning more about myself, to form
+                an identity.
+                <br /> <br />
+                My inspiration to study CS came from a docuseries about
+                professor Dennis Hong, a Korean-American robotics engineer,
+                which opened my eyes into dedicating my life and work into
+                robots and technology to help people.
+                <br /> <br />
+                As a Korean living in Mexico I had tons of opportunities to live
+                and learn from both cultures, which sparked my love to meet and
+                connect with people all around the world. Traveling and learning
+                are main mottos as I go on this journey called life.
+                <br /> <br />
+              </Typography>
             </Grid>
             <Grid item xs={0} md={1}>
               {" "}
@@ -90,6 +103,9 @@ export default function About() {
                 ))}
               </Grid>
             </Grid>
+            <Box display="flex" width="100%" alignItems="center">
+              <img src={myImage} alt="me" className={classes.image} />
+            </Box>
           </Grid>
           <Spacer height={50} />
           <Typography variant="h4" gutterBottom align="center">
