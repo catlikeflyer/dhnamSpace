@@ -52,5 +52,12 @@ code {
 
 .active {
   border-bottom: 3px solid #ffffff;
-  transition: all ease-in-out .2s;
+  transition: all ease-in-out 0.2s;
+}
+
+#contact {
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%23ebebeb' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%235c8393' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%23d4dade' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%23567d92' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%23bec9d1' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23527691' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%23a8b8c4' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%23516f8f' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%2392a7b7' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%2352688c' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%237c97aa' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%23556088' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
 }
