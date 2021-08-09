@@ -19,6 +19,15 @@ export default function Contact() {
       color: "white",
       minHeight: "100vh",
     },
+    button: {
+      "&:hover": {
+        color: "grey",
+      },
+    },
+    link: {
+        textDecoration: "none",
+        color: "inherit"
+    }
   }));
   const theme = useTheme();
   const classes = useStyles(theme);
@@ -40,11 +49,20 @@ export default function Contact() {
           alignItems="center"
         >
           {data.contact.map((soc) => (
-            <IconButton aria-label={soc.social}>
-              <Icon
-                className={soc.icon}
-                style={{ fontSize: 40, color: "white", padding: 15 }}
-              />
+            <IconButton
+              aria-label={soc.social}
+              className={classes.button}
+              color="inherit"
+            >
+              <a href={soc.link} target="blank" className={classes.link}>
+                <Icon
+                  className={soc.icon}
+                  style={{
+                    fontSize: 40,
+                    padding: 15,
+                  }}
+                />
+              </a>
             </IconButton>
           ))}
         </Box>
