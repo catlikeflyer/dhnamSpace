@@ -1,9 +1,16 @@
 import React from "react";
-import { Box, makeStyles, Typography, useTheme } from "@material-ui/core";
+import {
+  Box,
+  Button,
+  makeStyles,
+  Typography,
+  useTheme,
+} from "@material-ui/core";
 import Carousel from "react-material-ui-carousel";
 import { ArrowLeft, ArrowRight } from "@material-ui/icons";
 import { useContext } from "react";
 import { DataContext } from "../context";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   empty: {
@@ -15,11 +22,11 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 10,
     minHeight: 500,
     backgroundPosition: "center",
-    backgroundAttachment: "cover"
+    backgroundAttachment: "contain",
   },
   textbox: {
     backgroundColor: "rgba(0, 0, 0, 0.7)",
-    minHeight: "100%",
+    minHeight: 500,
     width: "50%",
   },
 }));
@@ -31,7 +38,7 @@ export default function CarouselExp() {
 
   const { docs } = useFirestore("experiences");
 
-  const SliderComponent = ({ title, jobTitle, desc, date, imageUrl }) => (
+  const SliderComponent = ({ title, jobTitle, desc, date, imageUrl, link }) => (
     <Box
       display="flex"
       flexDirection="row"
@@ -47,9 +54,16 @@ export default function CarouselExp() {
         <Typography variant="body1" gutterBottom style={{ color: "#c0c0c0" }}>
           {date}
         </Typography>
-        <Typography paragraph gutterBottom>
+        <Typography paragraph gutterBottom style={{ fontSize: 18 }}>
           {desc}
         </Typography>
+        {link && (
+          <a href={link} target="blank" style={{ textDecoration: "none" }}>
+            <Button variant="contained" color="primary">
+              Visit Website
+            </Button>
+          </a>
+        )}
       </Box>
     </Box>
   );

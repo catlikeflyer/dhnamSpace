@@ -26,10 +26,12 @@ const useStyles = makeStyles({
 export default function ExpUpload() {
   const classes = useStyles();
   const [title, setTitle] = useState("");
+  const [jobTitle, setJobTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [link, setLink] = useState("");
   const [date, setDate] = useState("");
   const [titleError, setTitleError] = useState(false);
+  const [jobTitleError, setJobTitleError] = useState(false);
   const [descError, setDescError] = useState(false);
   const [linkError, setLinkError] = useState(false);
   const [fileError, setFileError] = useState(false);
@@ -46,6 +48,7 @@ export default function ExpUpload() {
     setTitleError(false);
     setDescError(false);
     setFileError(false);
+    setJobTitleError(false);
 
     if (title === "") {
       setTitleError(true);
@@ -63,20 +66,25 @@ export default function ExpUpload() {
       setDateError(true);
     }
 
+    if (jobTitle === "") {
+      setJobTitleError(true);
+    }
+
     if (!file) {
       setFileError(true);
     }
 
-    if (title && desc && link && file) {
+    if (title && desc && link && file && jobTitle && date) {
       const collectionRef = pFirestore.collection("experiences");
       const created = timestamp();
       const probj = {
         title: title,
+        jobTitle: jobTitle,
         desc: desc,
-        imageUrl: fileURL, 
+        imageUrl: fileURL,
         link: link,
         created: created,
-        date: date
+        date: date,
       };
       collectionRef.add(probj);
       console.log("added exp");
@@ -125,7 +133,7 @@ export default function ExpUpload() {
         <TextField
           onChange={(e) => setTitle(e.target.value)}
           className={classes.field}
-          label="Title"
+          label="Company"
           variant="outlined"
           color="secondary"
           fullWidth
@@ -133,9 +141,19 @@ export default function ExpUpload() {
           error={titleError}
         />
         <TextField
+          onChange={(e) => setJobTitle(e.target.value)}
+          className={classes.field}
+          label="Position"
+          variant="outlined"
+          color="secondary"
+          fullWidth
+          required
+          error={jobTitleError}
+        />
+        <TextField
           onChange={(e) => setLink(e.target.value)}
           className={classes.field}
-          label="Demo link"
+          label="Website (if exists)"
           variant="outlined"
           color="secondary"
           fullWidth
