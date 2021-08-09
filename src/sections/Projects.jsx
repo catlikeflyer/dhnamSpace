@@ -14,7 +14,7 @@ import { DataContext } from "../context";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    backgroundColor: "rgba(10, 10, 10, 0.8)",
+    backgroundImage: "linear-gradient(rgba(10, 10, 10, 0.8), rgba(0, 0, 0))",
     width: "100%",
     color: "white",
     minHeight: "100vh",
