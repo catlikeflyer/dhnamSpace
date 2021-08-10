@@ -1,4 +1,10 @@
-import { Typography, Box, useTheme, makeStyles } from "@material-ui/core";
+import {
+  Typography,
+  Box,
+  useTheme,
+  makeStyles,
+  useMediaQuery,
+} from "@material-ui/core";
 import ColorDivider from "../components/ColorDivider";
 import React from "react";
 import Typist from "react-typist";
@@ -36,6 +42,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Header() {
   const theme = useTheme();
   const classes = useStyles(theme);
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
   return (
     <div className={classes.header} id="space">
@@ -54,6 +61,7 @@ export default function Header() {
           marginBottom="auto"
           position="absolute"
           top="25%"
+          m={isMobile ? 4 : 0}
         >
           <Typist>
             <Box display="flex" flexDirection="column" alignItems="flex-start">
