@@ -18,7 +18,7 @@ import Spacer from "../components/Spacer";
 
 const useStyles = makeStyles((theme) => ({
   container: {
-    backgroundImage: "linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0))",
+    backgroundImage: "linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0.8))",
     width: "100%",
     color: "white",
     minHeight: "100vh",
